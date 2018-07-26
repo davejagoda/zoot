@@ -1,0 +1,61 @@
+{
+  "builders": [
+    {
+      "boot_command": [
+        "<enter><wait20>",
+        "<enter><wait>",
+        "<enter><wait>",
+        "<enter><wait>",
+        "<enter><wait>",
+        "<enter><wait>",
+        "<enter><wait>",
+        "zoot<enter><enter><wait>",
+        "<tab><tab><enter><wait>",
+        "<spacebar><tab><tab><enter><wait>",
+        "password<tab>password<tab><enter><wait>",
+        "<tab><tab><tab><tab><enter><wait>",
+        "n<tab><enter><wait>",
+        "<enter><wait180>",
+        "<tab><enter><wait>",
+        "<enter>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": "{{user `disk_size`}}",
+      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "guest_os_type": "RedHat",
+      "hard_drive_interface": "ide",
+      "headless": "{{ user `headless` }}",
+      "iso_checksum_type": "md5",
+      "iso_url": "file://./zoot-i386.iso",
+      "iso_checksum": "b7cb386ec426ae38a925bdd844b86f84",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_username": "vagrant",
+      "ssh_wait_timeout": "10000s",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--memory",
+          "{{ user `memory` }}"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--cpus",
+          "{{ user `cpus` }}"
+        ]
+      ],
+      "virtualbox_version_file": ".vbox_version",
+      "vm_name": "{{ user `template` }}"
+    }
+  ],
+  "variables": {
+    "cpus": "1",
+    "disk_size": "4096",
+    "headless": "",
+    "memory": "1024",
+    "template": "zoot"
+  }
+}
