@@ -10,12 +10,13 @@
         "<enter><wait>",
         "<enter><wait>",
         "zoot<enter><enter><wait>",
-        "<tab><tab><enter><wait>",
+        "<tab><enter><wait>",
+        "<tab><tab><enter><wait5>",
         "<spacebar><tab><tab><enter><wait>",
         "password<tab>password<tab><enter><wait>",
         "<tab><tab><tab><tab><enter><wait>",
         "n<tab><enter><wait>",
-        "<enter><wait180>",
+        "<enter><wait120>",
         "<tab><enter><wait>",
         "<enter>"
       ],
@@ -45,6 +46,12 @@
           "{{.Name}}",
           "--cpus",
           "{{ user `cpus` }}"
+        ],
+        [
+          "modifyvm",
+          "{{.Name}}",
+          "--nictype1",
+          "{{ user `nic` }}"
         ]
       ],
       "virtualbox_version_file": ".vbox_version",
@@ -56,6 +63,7 @@
     "disk_size": "4096",
     "headless": "",
     "memory": "1024",
+    "nic": "Am79C970A",
     "template": "zoot"
   }
 }
