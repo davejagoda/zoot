@@ -28,8 +28,8 @@
         "password<tab>password<tab><enter><wait>",
         // user account
         "<tab><tab><tab><tab><enter><wait>",
-        // display = nvidia
-        "n<tab><enter><wait>",
+        // display = Generic VGA compatible
+        "g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait>g<wait><tab><enter><wait>",
         // acknowledge install about to begin, wait to finish
         "<enter><wait120>",
         // skip making boot disk
