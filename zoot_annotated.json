@@ -2,22 +2,39 @@
   "builders": [
     {
       "boot_command": [
+        // start boot, give time to finish
         "<enter><wait20>",
+        // pick install language
         "<enter><wait>",
+        // model keyboard = us
         "<enter><wait>",
+        // acknowledge redhat splash screen
         "<enter><wait>",
+        // installation type = GNOME Workstation
         "<enter><wait>",
+        // initialize partition table
         "<enter><wait>",
+        // automatic partitioning
         "<enter><wait>",
+        // hostname
         "zoot<enter><enter><wait>",
+        // network configuration
         "<tab><enter><wait>",
+        // mouse
         "<tab><tab><enter><wait5>",
+        // timezone
         "<spacebar><tab><tab><enter><wait>",
+        // password
         "password<tab>password<tab><enter><wait>",
+        // user account
         "<tab><tab><tab><tab><enter><wait>",
+        // display = nvidia
         "n<tab><enter><wait>",
+        // acknowledge install about to begin, wait to finish
         "<enter><wait120>",
+        // skip making boot disk
         "<tab><enter><wait>",
+        // acknowledge build complete to reboot
         "<enter>"
       ],
       "boot_wait": "10s",
