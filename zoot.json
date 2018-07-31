@@ -27,7 +27,7 @@
       "hard_drive_interface": "ide",
       "headless": "{{ user `headless` }}",
       "iso_checksum_type": "md5",
-      "iso_url": "zoot-i386.iso",
+      "iso_url": "http://archive.kernel.org/redhat-archive/redhat/linux/6.2/en/iso/i386/zoot-i386.iso",
       "iso_checksum": "edae0ad77683d69b7d9a197853310ba7",
       "ssh_password": "vagrant",
       "ssh_port": 22,
